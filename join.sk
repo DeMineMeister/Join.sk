@@ -1,0 +1,14 @@
+on join:
+  if {Joins::*} does not contain player:
+     add stone sword named "&7Default Sword" to player
+     add player to {Joins::*}
+     set join message to "Welcome &6%player%&r to the server"
+   else:
+    set join message to "Welcome &6%player%&r to the server"
+
+
+command /resetjoins:
+  permission: joins.reset
+  trigger:
+    delete {Joins::*}
+    send "Deleted joins" to player
