@@ -1,12 +1,12 @@
 on join:
-  if {Joins::*} does not contain player:
+   if {Joins::*} does not contain player:
      add stone sword named "&7Starter Sword" to player
      add stone pickaxe named "&7Starter Pickaxe" to player
      add stone axe named "&7Starter Axe" to player
      add player to {Joins::*}
      set join message to "Welcome &6%player%&r to the server"
    else:
-    set join message to "Welcome &6%player%&r to the server"
+     set join message to "Welcome &6%player%&r back to the server"
 
 
 command /resetjoins:
