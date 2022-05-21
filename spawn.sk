@@ -1,0 +1,24 @@
+on join:
+	teleport player to {spawn}
+	
+command /setspawn:
+	trigger:
+		if player has permission "spawn.set":
+			if {spawn} is not set:
+				send "[ServerName] &aThe spawn has been set"
+				set {spawn} to location of player
+				stop
+			
+command /delspawn:
+	trigger:
+		if player has permission "spawn.delete":
+			if {spawn} is set:
+				send "&6[DarksPvPBox] &aThe spawn has been deleted"
+				delete {spawn}
+				stop
+
+			
+command /spawn:
+	trigger:
+		teleport player to {spawn}
+		send "&6[DarksPvPBox] &aYou have been teleported to spawn"
