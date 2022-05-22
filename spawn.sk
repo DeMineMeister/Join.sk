@@ -20,7 +20,7 @@ command /delspawn:
 			
 command /spawn:
 	trigger:
-		send "&6[DarksPvPBox] Teleportation will commence in &a5 seconds" to player
-		wait 5 seconds. &6Dont move
+		send "&6[DarksPvPBox] Teleportation will commence in &a5 seconds &6Dont move" to player
+		wait 5 seconds
 		teleport player to {spawn}
 		send "&6[DarksPvPBox] &aYou have been teleported to spawn"
